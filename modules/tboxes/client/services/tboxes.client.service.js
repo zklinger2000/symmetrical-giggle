@@ -9,7 +9,7 @@
 
   function TboxesService($resource) {
     return $resource('api/tboxes/:tboxId', {
-      tboxId: '@_id'
+      tboxId: '@_id',
     }, {
       update: {
         method: 'PUT'

@@ -20,6 +20,11 @@ var TboxSchema = new Schema({
     trim: true,
     required: 'Category cannot be blank'
   },
+  size: {
+    type: Number,
+    default: 1,
+    required: 'Size cannot be blank'
+  },
   content: {
     type: String,
     default: '',

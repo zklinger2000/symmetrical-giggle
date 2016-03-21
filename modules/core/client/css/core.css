@@ -114,10 +114,6 @@ a.anchor-md {
 .button-primary:active {
   background: #aa0000;
 }
-.button-primary:focus {
-  /*color: green;*/
-  /*outline-color: #ee3333;*/
-}
 .alert-box, .tbox-list-header h1 {
   text-align: center;
 }
