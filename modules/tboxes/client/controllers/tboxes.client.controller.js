@@ -17,22 +17,10 @@
     vm.remove = remove;
     vm.save = save;
 
-    vm.tbox.size = 5;
-    
-    $scope.data = {
-      availableOptions: [
-        {id: '1', value: '1'},
-        {id: '2', value: '2'},
-        {id: '3', value: '3'}
-      ],
-      selectedOption: {id: '3', value: '3'} //This sets the default value of the select in the ui
-    };
+    vm.getNumber = getNumber;
 
-    // vm.number = 5;
-    vm.getNumber = function(num) {
-      var int = Number(num);
-      return new Array(int);   
-    }
+    vm.tbox.size = 5;
+    vm.tbox.count = 1;
 
     // Remove existing Tbox
     function remove() {
@@ -63,5 +51,12 @@
         vm.error = res.data.message;
       }
     }
+
+    // Utility for creating a sized Array dynamically
+    function getNumber(num) {
+      var int = Number(num);
+      return new Array(int);
+    };
+
   }
 }());

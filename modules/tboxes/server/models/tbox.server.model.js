@@ -25,7 +25,12 @@ var TboxSchema = new Schema({
     default: 1,
     required: 'Size cannot be blank'
   },
-  content: {
+  count: {
+    type: Number,
+    default: 1,
+    required: 'Size cannot be blank'
+  },
+  unit: {
     type: String,
     default: '',
     trim: true

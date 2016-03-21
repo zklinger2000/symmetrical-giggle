@@ -31,10 +31,37 @@ a.list-group-tbox:active {
 /* ================================= 
   Flexbox Styles
 ==================================== */
-.list-tboxes {
+.list-tboxes,
+.tbox-form,
+.tbox-form-inputs,
+.tbox-form-preview,
+.tbox-form-button {
   display: flex;
   flex-direction: column;
 }
 .list-group-tbox {
-  align-self: center;
+  /*align-self: center;*/
+}
+.tbox-form-button button {
+  margin-left: auto;
+}
+
+/* ================================= 
+  Media Query: >= 769px
+==================================== */
+@media (min-width: 769px) {
+  
+  .tbox-form, .tbox-form-button {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .tbox-form-inputs, .tbox-form-preview {
+    flex: 1;
+    align-self: flex-start;
+    /*max-width: 38%;*/
+  }
+  .tbox-form-button {
+    flex-direction: column-reverse;
+  }
+
 }

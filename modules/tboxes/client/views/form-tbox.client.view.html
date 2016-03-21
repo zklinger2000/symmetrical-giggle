@@ -2,9 +2,9 @@
   <div class="page-header">
     <h1>{{vm.tbox._id ? 'Edit Timebokz' : 'New Timebokz'}}</h1>
   </div>
-  <div class="col-md-12">
-    <form name="vm.form.tboxForm" class="form-horizontal" ng-submit="vm.save(vm.form.tboxForm.$valid)" novalidate>
-      <fieldset>
+  <form name="vm.form.tboxForm" ng-submit="vm.save(vm.form.tboxForm.$valid)" novalidate>
+    <div class="tbox-form">
+      <div class="tbox-form-inputs">
         <div class="form-group" show-errors>
           <label class="control-label" for="category">category</label>
           <input name="category" type="text" ng-model="vm.tbox.category" id="category" class="form-control" placeholder="something like, 'Exercise' or 'Writing'" required>
@@ -33,20 +33,16 @@
             <p class="help-block error-text" ng-message="required">unit type is required</p>
           </div>
         </div>
-        <div class="form-group">
-          <label class="control-label" for="content">Content</label>
-          <textarea name="content" data-ng-model="vm.tbox.content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
-        </div>
-        <ul>
-          <li ng-repeat="i in vm.getNumber(vm.tbox.size) track by $index"><span>{{$index+1}}</span></li>
-        </ul>
-        <div class="form-group">
-          <button type="submit" class="button-primary">{{vm.tbox._id ? 'Update' : 'Create'}}</button>
-        </div>
-        <div ng-show="vm.error" class="text-danger">
-          <strong ng-bind="vm.error"></strong>
-        </div>
-      </fieldset>
-    </form>
-  </div>
+      </div>
+      <ul class="tbox-form-preview">
+        <li ng-repeat="i in vm.getNumber(vm.tbox.size) track by $index"><span>{{$index+1}}</span></li>
+      </ul>
+    </div>
+    <div class="tbox-form-button">
+      <button type="submit" class="button-primary">{{vm.tbox._id ? 'Update' : 'Create'}}</button>
+    </div>
+    <div ng-show="vm.error" class="text-danger">
+      <strong ng-bind="vm.error"></strong>
+    </div>
+  </form>
 </section>
