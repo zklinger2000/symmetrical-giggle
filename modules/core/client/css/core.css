@@ -4,6 +4,7 @@
 
 * {
   box-sizing: border-box;
+  outline-color: #ee3333;
 }
 body {
   font-size: 1.35em;
@@ -15,6 +16,7 @@ body {
 }
 .content {
   margin-top: 50px;
+  /*outline-color: #ee3333;*/
   /*background-color: #333;*/
 }
 .navbar-brand {
@@ -111,6 +113,10 @@ a.anchor-md {
 }
 .button-primary:active {
   background: #aa0000;
+}
+.button-primary:focus {
+  /*color: green;*/
+  /*outline-color: #ee3333;*/
 }
 
 /* ================================= 
