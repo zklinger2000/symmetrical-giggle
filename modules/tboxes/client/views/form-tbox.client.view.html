@@ -34,10 +34,30 @@
           </div>
         </div>
       </div>
-      <ul class="tbox-form-preview">
-        <li ng-repeat="i in vm.getNumber(vm.tbox.size) track by $index"><span>{{$index+1}}</span></li>
-      </ul>
+      <!-- END: tbox-form-inputs -->
+      <!-- Tbox Preview Section -->
+      <div class="tbox-form-preview">
+        <div class="tbox-wrapper">
+          <div class="tbox-header">
+            <div ng-hide="vm.tbox.category" class="tbox-category">Category</div>
+            <div ng-show="vm.tbox.category" class="tbox-category" ng-bind="vm.tbox.category"></div>
+<!--             <div ng-hide="vm.tbox.count" class="tbox-count-temp">count</div> -->
+            <div class="tbox-count" ng-bind="vm.tbox.count"></div>
+            <div ng-hide="vm.tbox.unit" class="tbox-unit">unit</div>
+            <div ng-show="vm.tbox.unit" class="tbox-unit" ng-bind="vm.tbox.unit"></div>
+          </div>
+          <div class="tbox-container">
+            <div ng-repeat="i in vm.getNumber(vm.tbox.size) track by $index"
+                 class="tbox-cell"
+                 ng-click="vm.tboxClick(cell, tbox)"
+                 ng-class="{'cell-done': cell.isDone}">
+              <div>{{ $index }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- END: tbox-form -->
     <div class="tbox-form-button">
       <button type="submit" class="button-primary">{{vm.tbox._id ? 'Update' : 'Create'}}</button>
     </div>

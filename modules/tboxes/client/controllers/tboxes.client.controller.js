@@ -19,7 +19,7 @@
 
     vm.getNumber = getNumber;
 
-    vm.tbox.size = 5;
+    vm.tbox.size = 6;
     vm.tbox.count = 1;
 
     // Remove existing Tbox

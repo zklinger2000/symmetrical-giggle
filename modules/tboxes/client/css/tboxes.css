@@ -1,5 +1,5 @@
 /* ================================= 
-  Tbox Styles
+  List View Styles
 ==================================== */
 
 .list-group-tbox {
@@ -27,11 +27,24 @@ a.list-group-tbox:active {
 .list-group-tbox-heading {
   font-size: 3em;
 }
+/* Flexbox Styles */
+.list-tboxes {
+  display: flex;
+  flex-direction: column;
+}
 
 /* ================================= 
-  Flexbox Styles
+  Form Styles
 ==================================== */
-.list-tboxes,
+
+.tbox-form-inputs, .tbox-form-preview {
+  margin: 15px 30px;
+}
+.tbox-form-button {
+  margin: 0 15px;
+}
+
+/* Flexbox Styles */
 .tbox-form,
 .tbox-form-inputs,
 .tbox-form-preview,
@@ -45,6 +58,67 @@ a.list-group-tbox:active {
 .tbox-form-button button {
   margin-left: auto;
 }
+.tbox-form-inputs, .tbox-form-preview {
+  flex: 1;
+}
+
+/* ================================= 
+  Tbox Styles
+==================================== */
+
+.tbox-wrapper {
+  background-color: green;
+  border-radius: 15px;
+}
+.tbox-category, .tbox-count, .tbox-unit {
+  padding: 15px;
+}
+.tbox-category {
+  font-weight: bold;
+  font-size: 2em;
+}
+.tbox-count, .tbox-unit {
+  font-size: 1.6em;
+}
+.tbox-container {
+  background-color: white;
+  margin: 15px;
+  padding: 15px;
+  color: #333;
+}
+.tbox-cell {
+  background-color: blue;
+  /*min-width: 25px;*/
+  margin: 15px;
+  padding: 15px;
+  height: 50px;
+}
+
+/* Flexbox Styles */
+.tbox-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.tbox-header,
+.tbox-container {
+  display: flex;
+}
+.tbox-header {
+  justify-content: flex-end;
+}
+.tbox-category {
+  margin-right: auto;
+}
+.tbox-category, .tbox-count, .tbox-unit {
+  align-self: flex-end;
+}
+.tbox-container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.tbox-cell {
+  flex: 1 0 50px;
+}
 
 /* ================================= 
   Media Query: >= 769px
@@ -53,15 +127,15 @@ a.list-group-tbox:active {
   
   .tbox-form, .tbox-form-button {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .tbox-form-inputs, .tbox-form-preview {
-    flex: 1;
-    align-self: flex-start;
+    /*flex: 1;*/
+    /*align-self: flex-start;*/
     /*max-width: 38%;*/
   }
   .tbox-form-button {
-    flex-direction: column-reverse;
+    /*flex-direction: column-reverse;*/
   }
 
 }
