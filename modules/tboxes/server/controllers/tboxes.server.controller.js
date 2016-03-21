@@ -81,7 +81,9 @@ exports.delete = function (req, res) {
  * List of Tboxes
  */
 exports.list = function (req, res) {
-  Tbox.find().sort('-created').populate('user', 'displayName').exec(function (err, tboxes) {
+  Tbox.find({
+    user: req.user._id
+  }).sort('-created').populate('user', 'displayName').exec(function (err, tboxes) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
