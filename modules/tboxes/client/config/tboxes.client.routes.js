@@ -46,7 +46,7 @@
         },
         data: {
           roles: ['user', 'admin'],
-          pageTitle: 'Edit Tbox {{ tboxResolve.title }}'
+          pageTitle: 'Edit {{ tboxResolve.category }}'
         }
       })
       .state('tboxes.view', {
@@ -58,7 +58,7 @@
           tboxResolve: getTbox
         },
         data: {
-          pageTitle: 'Tbox {{ tboxResolve.title }}'
+          pageTitle: '{{ tboxResolve.category }}'
         }
       });
   }

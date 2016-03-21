@@ -14,11 +14,11 @@ var TboxSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  title: {
+  category: {
     type: String,
     default: '',
     trim: true,
-    required: 'Title cannot be blank'
+    required: 'Category cannot be blank'
   },
   content: {
     type: String,

@@ -15,22 +15,21 @@
   <div ng-if="authentication.user" ng-controller="TboxesListController as vm">
     <section class="tbox-list">
       <div class="tbox-list-header">
-        <h1>Your Timebokzes</h1>
+        <h1>Your Timebokzez</h1>
       </div>
       <div class="alert-box" ng-if="vm.tboxes.$resolved && !vm.tboxes.length">
         No tboxes yet, why don't you <a ui-sref="tboxes.create">create one</a>?
       </div>
-      <div class="list-group">
-        <a ng-repeat="tbox in vm.tboxes" ui-sref="tboxes.view({ tboxId: tbox._id })" class="list-group-item">
-          <small class="list-group-item-text">
-            Posted on
-            <span ng-bind="tbox.created | date:'mediumDate'"></span>
-            by
-            <span ng-if="tbox.user" ng-bind="tbox.user.displayName"></span>
-            <span ng-if="!tbox.user">Deleted User</span>
-          </small>
-          <h4 class="list-group-item-heading" ng-bind="tbox.title"></h4>
-          <p class="list-group-item-text" ng-bind="tbox.content"></p>
+      <div class="list-tboxes">
+        <a ng-repeat="tbox in vm.tboxes" ui-sref="tboxes.view({ tboxId: tbox._id })" class="list-group-tbox">
+          <div>{{ tbox.hello() }}
+            <h4 class="list-group-tbox-heading" ng-bind="tbox.category"></h4>
+            <p class="list-group-tbox-text" ng-bind="tbox.content"></p>
+            <small class="list-group-tbox-text">
+              Created 
+              <span ng-bind="tbox.created | date:'mediumDate'"></span>
+            </small>
+          </div>
         </a>
       </div>
     </section>

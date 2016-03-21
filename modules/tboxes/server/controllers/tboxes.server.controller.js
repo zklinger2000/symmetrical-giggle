@@ -46,7 +46,7 @@ exports.read = function (req, res) {
 exports.update = function (req, res) {
   var tbox = req.tbox;
 
-  tbox.title = req.body.title;
+  tbox.category = req.body.category;
   tbox.content = req.body.content;
 
   tbox.save(function (err) {

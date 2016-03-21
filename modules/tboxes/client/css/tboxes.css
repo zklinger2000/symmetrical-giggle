@@ -1,0 +1,40 @@
+/* ================================= 
+  Tbox Styles
+==================================== */
+
+.list-group-tbox {
+  margin: 15px;
+  padding: 25px 40px;
+  text-align: center;
+  border: 1px solid #aa0000;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px 5px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 4px #000;
+  background: #ee0000;
+  cursor: pointer;  
+}
+a.list-group-tbox:hover {
+  text-decoration: none;
+  background: #cc0000;
+}
+a.list-group-tbox:active {
+  background: #aa0000;
+}
+.list-group-tbox-heading, .list-group-tbox-text {
+  /*background-color: #dd0000;*/
+  color: #eee;
+}
+.list-group-tbox-heading {
+  font-size: 3em;
+}
+
+/* ================================= 
+  Flexbox Styles
+==================================== */
+.list-tboxes {
+  display: flex;
+  flex-direction: column;
+}
+.list-group-tbox {
+  align-self: center;
+}
