@@ -39,9 +39,7 @@
       }
 
       function successCallback(res) {
-        $state.go('tboxes.view', {
-          tboxId: res._id
-        });
+        $state.go('home');
       }
 
       function errorCallback(res) {
