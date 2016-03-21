@@ -72,9 +72,11 @@ a.anchor-md {
 }
 .has-error .help-block.error-text {
   display: block;
+  color: #ee3333;
 }
 .has-error .help-inline.error-text {
   display: inline;
+  color: #ee3333;
 }
 .header-logo img {
   max-width: 200px;
