@@ -1,14 +1,14 @@
 {
-  "name": "meanjs",
-  "description": "Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js.",
-  "version": "0.5.0-beta",
+  "name": "timebokz",
+  "description": "Another Take on the Todo List",
+  "version": "0.0.1",
   "meanjs-version": "0.5.0-beta",
   "private": false,
-  "author": "https://github.com/meanjs/mean/graphs/contributors",
-  "license": "MIT",
+  "author": "Zachary Klinger",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/meanjs/mean.git"
+    "url": "https://github.com/zklinger2000/timebokz.git"
   },
   "engines": {
     "node": ">=0.12.0",

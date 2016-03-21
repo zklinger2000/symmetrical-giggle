@@ -1,5 +1,28 @@
+/* ================================= 
+  Page Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.35em;
+  font-family: 'Varela Round', sans-serif;
+  color: #eee;
+  background: #333;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 .content {
   margin-top: 50px;
+  /*background-color: #333;*/
+}
+.navbar-brand > img {
+    display: block;
+    width: 30px;
+    /*height: 20px;*/
+    vertical-align: middle;
+    /*padding-bottom: 15px;*/
 }
 .undecorated-link:hover {
   text-decoration: none;
@@ -40,4 +63,50 @@ a:hover .header-profile-image {
 }
 .has-error .help-inline.error-text {
   display: inline;
+}
+.header-logo img {
+  max-width: 200px;
+  margin: 50px 0 0;
+}
+.header-brand {
+  font-size: 3em;
+  font-weight: bold;
+}
+.header-copy {
+  font-size: 1.5em;
+}
+.login-buttons {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.5em;
+}
+.button-primary {
+  display: inline-block;
+  padding: 15px;
+  margin: 15px 15px 30px;
+  text-shadow: 2px 2px 4px #000;
+  background: #ee0000;
+  border: 1px solid #aa0000;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px 1px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+.button-primary:hover {
+  background: #cc0000;
+}
+.button-primary:active {
+  background: #aa0000;
+}
+
+/* ================================= 
+  Flexbox
+==================================== */
+
+.header {
+  display: flex;
+  /*justify-content: center;*/
+  flex-direction: column;
+}
+.header-logo, .header-brand, .header-copy {
+  align-self: center;
 }

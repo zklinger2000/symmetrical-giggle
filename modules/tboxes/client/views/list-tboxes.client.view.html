@@ -1,0 +1,21 @@
+<section>
+  <div class="page-header">
+    <h1>Tboxes</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="tbox in vm.tboxes" ui-sref="tboxes.view({ tboxId: tbox._id })" class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="tbox.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="tbox.user" ng-bind="tbox.user.displayName"></span>
+        <span ng-if="!tbox.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="tbox.title"></h4>
+      <p class="list-group-item-text" ng-bind="tbox.content"></p>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.tboxes.$resolved && !vm.tboxes.length">
+    No tboxes yet, why don't you <a ui-sref="tboxes.create">create one</a>?
+  </div>
+</section>

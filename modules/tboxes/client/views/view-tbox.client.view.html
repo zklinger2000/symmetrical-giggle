@@ -1,0 +1,23 @@
+<section>
+  <div class="page-header">
+    <h1 ng-bind="vm.tbox.title"></h1>
+  </div>
+  <div class="pull-right" ng-show="vm.tbox.isCurrentUserOwner">
+    <a class="btn btn-primary" ui-sref="tboxes.edit({ tboxId: vm.tbox._id })">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span ng-bind="vm.tbox.created | date:'mediumDate'"></span>
+      by
+      <span ng-if="vm.tbox.user" ng-bind="vm.tbox.user.displayName"></span>
+      <span ng-if="!vm.tbox.user">Deleted User</span>
+    </em>
+  </small>
+  <p class="lead" ng-bind="vm.tbox.content"></p>
+</section>
