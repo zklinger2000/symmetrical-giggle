@@ -37,6 +37,9 @@ a.list-group-tbox:active {
   Form Styles
 ==================================== */
 
+.form-control {
+  
+}
 .tbox-form-inputs, .tbox-form-preview {
   margin: 15px 30px;
 }
@@ -67,33 +70,44 @@ a.list-group-tbox:active {
 ==================================== */
 
 .tbox-wrapper {
-  background-color: green;
+  background-color: #888;
   border-radius: 15px;
+  box-shadow: 2px 2px 20px 6px rgba(0,0,0,0.3);
 }
-.tbox-category, .tbox-count, .tbox-unit {
+.tbox-category {
   padding: 15px;
+}
+.tbox-count, .tbox-unit {
+  padding: 15px 15px 15px 0;
 }
 .tbox-category {
   font-weight: bold;
   font-size: 2em;
+  text-shadow: 2px 2px 4px #000;
 }
 .tbox-count, .tbox-unit {
   font-size: 1.6em;
+  text-shadow: 2px 2px 4px #000;
 }
 .tbox-container {
   background-color: white;
+  border-radius: 15px;
   margin: 15px;
   padding: 15px;
   color: #333;
+  box-shadow: inset 2px 2px 20px 1px rgba(0,0,0,0.3);
 }
 .tbox-cell {
   background-color: blue;
-  /*min-width: 25px;*/
+  border-radius: 5px;
   margin: 15px;
   padding: 15px;
   height: 50px;
+  box-shadow: 2px 2px 20px 1px rgba(0,0,0,0.3);
 }
-
+.tbox-cell.preview {
+  background-color: #ee0000;
+}
 /* Flexbox Styles */
 .tbox-wrapper {
   display: flex;

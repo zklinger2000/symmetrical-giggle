@@ -48,10 +48,9 @@
           </div>
           <div class="tbox-container">
             <div ng-repeat="i in vm.getNumber(vm.tbox.size) track by $index"
-                 class="tbox-cell"
+                 class="tbox-cell preview"
                  ng-click="vm.tboxClick(cell, tbox)"
                  ng-class="{'cell-done': cell.isDone}">
-              <div>{{ $index }}</div>
             </div>
           </div>
         </div>
